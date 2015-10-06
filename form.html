@@ -1,0 +1,39 @@
+	<div class="container-fluid">
+		<form>
+	<div class="form-group">
+		<label for="">Referral Name</label>
+		<input type="text" class="form-control" placeholder="Referral Name" ng-model="vm.name">
+	</div>
+
+	<button type="submit" class="btn btn-primary" ng-click="vm.add(vm.name)">Submit</button>
+</form>
+
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Clicks</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in vm.referrals">
+			<td ng-click="item.clicks = item.clicks + 1"><span ng-hide="editorEnabled"><a href="#/{{item.name}}">{{item.name}}</a></span>    <span ng-show="editorEnabled">
+      <input ng-model="item.name">
+      <button class="btn btn-default" ng-click="editorEnabled=!editorEnabled">Save</button>
+    </span></td>
+			<td>{{item.clicks}}</td>
+			<td><button class="btn btn-default" ng-click="editorEnabled=!editorEnabled">Edit</button></td>
+			<td><button class="btn btn-default" ng-click="vm.remove(item)">Delete</button></td>
+		</tr>
+	</tbody>
+</table>
+
+
+	</div>
+
+	<div class="container-fluid">
+		<p class="text-right" style="color: #ccc; font-size: .8em; letter-spacing: 2px;">&copy; 2015 sup</p>
+	</div>

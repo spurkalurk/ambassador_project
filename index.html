@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<title>AngularJS - Services!</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="//code.jquery.com/jquery.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="formApp" ng-controller="FormController as vm">
+	<nav class="navbar navbar-default" role="navigation" ng-controller="HeaderController as vm">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#/">Referrals</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li ng-class="{ active: vm.isActive('/')}"><a href="#/">Form</a></li>
+			
+		</ul>
+		</div>
+	</nav>
+	<ng-view></ng-view>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>	
+	
+	<script src="controllers.js"></script>
+
+</body>
+</html>

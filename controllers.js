@@ -34,7 +34,7 @@ app.controller('HeaderController', ['$location', function($location) {
     };
 }]);
 
-app.controller('FormController', [function($routeParams, $location) {
+app.controller('FormController', ['$routeParams', '$location', function($routeParams, $location) {
 
 	var self = this;
 
@@ -54,8 +54,6 @@ app.controller('FormController', [function($routeParams, $location) {
 
 		console.log(self.name);
 
-		$location.search('name', self.name);
-
 	};
 
 
@@ -68,6 +66,5 @@ app.controller('FormController', [function($routeParams, $location) {
 	}
 
 
-
-
 }]);
+

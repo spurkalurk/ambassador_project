@@ -20,7 +20,7 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="item in vm.referrals">
-			<td ng-click="item.clicks = item.clicks + 1"><span ng-hide="editorEnabled"><a href="#/{{item.name}}">{{item.name}}</a></span>    <span ng-show="editorEnabled">
+			<td ng-click="item.clicks = item.clicks + 1"><span ng-hide="editorEnabled"><a href="#/{{item.name}}" ng-click="vm.store(item.name)">{{item.name}}</a></span>    <span ng-show="editorEnabled">
       <input ng-model="item.name">
       <button class="btn btn-default" ng-click="editorEnabled=!editorEnabled">Save</button>
     </span></td>

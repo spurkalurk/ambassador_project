@@ -38,6 +38,8 @@ app.controller('FormController', [function($routeParams, $location) {
 
 	var self = this;
 
+	self.test = "test test";
+
 	self.referrals= [
 		{ name: 'Bob', clicks: 0},
 		{ name: 'Harry', clicks: 0}
@@ -60,6 +62,10 @@ app.controller('FormController', [function($routeParams, $location) {
 	self.remove = function(item) {
 		self.referrals.splice(self.referrals.indexOf(item), 1);
 	};
+
+	self.store= function(clicked) {
+		self.storedName= clicked;
+	}
 
 
 
